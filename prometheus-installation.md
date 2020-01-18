@@ -26,3 +26,7 @@ prom-local-prometheus-server.default.svc.cluster.local
 You can use grafana dashboard to see the pod , deployment overview . Use the existing dashboards already in the community.
 
 
+* grafana can be installed as a binary on the system or it can be installed as a deployment on k8s .  
+* for example : installing grafana on mac,  just download it using brew .
+            brew update && brew install grafana
+* grafana download location https://grafana.com/grafana/download
