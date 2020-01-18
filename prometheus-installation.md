@@ -13,9 +13,9 @@ NOTES:
 prom-local-prometheus-server.default.svc.cluster.local
 
 
-    Get the Prometheus server URL by running these commands in the same shell:
-    export POD_NAME=$(kubectl get pods --namespace default -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
-    kubectl --namespace default port-forward $POD_NAME 9090
+        * Get the Prometheus server URL by running these commands in the same shell:
+        * export POD_NAME=$(kubectl get pods --namespace default -l "app=prometheus,component=server" -o  jsonpath="{.items[0].metadata.name}")
+        * kubectl --namespace default port-forward $POD_NAME 9090
 
 * Port-forwarding to the port to directly access the prometheus.
 * Better way is to create a Node Port Service and then access that.
