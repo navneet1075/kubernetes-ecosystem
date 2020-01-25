@@ -1,12 +1,10 @@
-**istio overview**
-	• Istio Components:
-		Control Plane
-			§ Pilot
-			§ Mixer
-			§ Citadel
-			§ Galley
-		• Data Plane:
-			§ Envoy proxy -> A high performance , highly configurable proxy written in C++ at Lyft.
+	• Control Plane
+		• Pilot
+		• Mixer
+		• Citadel
+		• Galley
+	• Data Plane:
+		• Envoy proxy -> A high performance , highly configurable proxy written in C++ at Lyft.
 
 Functions of multiple components:
 	• Pilot : Configures the envoy proxy for  traffic routing .
@@ -17,8 +15,7 @@ Functions of multiple components:
 	• Citadel: Identity management for envoy proxies. Provides all the certificates to the sidecars.
 
 
-Istio Resources:
-
+**Istio Resources**
 	• VirtualService
 	• DestinationRule
 	• Gateway
@@ -39,5 +36,5 @@ What istio handles for us in Traffic Management .
 	• Load Balancing according to different policies. -> By default the envoy proxies does the random load balancing to the instances backed by k8s service. Pilot allows to configure the policy on a per service basis to change the load balancing policy.
 	• Fault Injection -> This is mainly used in testing to mimic scenarios of fault which we encounter in real production envs and identify the behavior of the system. For example : 
 	• Retries: automatic retries to a service . This is useful in case if in some case the app is overwhelmed by too many requests and needs some time between to respond. The duration between 2 tries is calculated by envoy proxy. Timeout per retry can also be specified.
-	• Timeouts : Timeout for a particular response to come from a particular service. Can be configured per service . The value is configurable and it should be adjusted according to the behvior of the application.
-AB Testing.  : Split traffic by percentage to different versions of the app .
+	• Timeouts : Timeout for a particular response to come from a particular service. Can be configured per service . The value is configurable and it should be adjusted according to the behavior of the application.
+	• AB Testing:  Split traffic by percentage to different versions of the app .
