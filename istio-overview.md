@@ -17,8 +17,11 @@ Functions of multiple components:
 
 **Istio Resources**
 	• VirtualService
+	
 	• DestinationRule
+	
 	• Gateway
+	
 	• ServiceEntry
 	
 	
